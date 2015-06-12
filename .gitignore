@@ -1,1 +1,4 @@
-# Created by .gitignore support plugin (hsz.mobi)
+.idea/*
+node_modules
+npm-debug.log*
+browser-package.json
