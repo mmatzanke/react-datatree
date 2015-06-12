@@ -1,0 +1,33 @@
+{
+  "name": "react-datatree",
+  "version": "0.0.1",
+  "description": "Datatree React component",
+  "scripts": {
+    "start": "npm build-lodash && npm build-admin-ui && ",
+    "build-lodash": "lodash compat exports=commonjs include=bind,filter,find,merge,assign,contains,forEach,reduce -o src/vendor/lodash.js",
+    "build-admin-ui": "parallelshell 'npm run build-admin-ui:js' 'npm run build-admin-ui:style'",
+    "build-admin-ui:js": "NODE_ENV=production browserify -t reactify ./src/content-mapping/route/admin/ui/src/index.js --insert-global-vars global -s admin > ./src/content-mapping/route/admin/ui/dist/admin.max.js",
+    "build-admin-ui:style": "node-sass --output-style compressed --source-map ./src/content-mapping/route/admin/ui/dist/admin.css.map ./src/content-mapping/route/admin/ui/style/index.scss ./src/content-mapping/route/admin/ui/dist/admin.css && autoprefixer ./src/content-mapping/route/admin/ui/dist/admin.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmatzanke/react-datatree.git"
+  },
+  "keywords": [
+    "react",
+    "datatree"
+  ],
+  "bugs": {
+    "url": "https://github.com/mmatzanke/react-datatree/issues"
+  },
+  "homepage": "https://github.com/mmatzanke/react-datatree",
+  "devDependencies": {
+    "local-web-server": "^0.5.19"
+  },
+  "dependencies": {
+    "lodash": "^3.9.3",
+    "lodash-cli": "^3.9.3",
+    "material-ui": "^0.9.0",
+    "react": "^0.13.3"
+  }
+}
