@@ -1,0 +1,12 @@
+{
+  "preset": "google",
+  "maximumLineLength": 200,
+  "requireCamelCaseOrUpperCaseIdentifiers": "ignoreProperties",
+  "disallowSpacesInsideObjectBrackets": null,
+  "disallowMultipleVarDecl": "exceptUndefined",
+  "excludeFiles": [
+    ".idea/**",
+    "src/tree/**",
+    "node_modules/**"
+  ]
+}

@@ -3,7 +3,7 @@
 var React = require('react');
 var MaterialUI = require('material-ui');
 
-var lodash = require('./vendor/lodash');
+var lodash = require('./../vendor/lodash');
 var filter = lodash.filter;
 var find = lodash.find;
 var merge = lodash.merge;
